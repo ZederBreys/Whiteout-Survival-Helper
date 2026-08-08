@@ -1,0 +1,29 @@
+---
+layout: base.njk
+permalink: /search/
+title: "Поиск"
+---
+
+<h1>Поиск</h1>
+
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js" type="text/javascript"></script>
+
+<div id="search"></div>
+
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    new PagefindUI({
+      element: "#search",
+      showSubResults: false,
+      showImages: false,
+      translations: {
+        placeholder: "Поиск по разделам...",
+        clear_search: "Очистить",
+        load_more: "Показать ещё",
+        search_label: "Поиск",
+        title: "Результаты поиска",
+      },
+    });
+  });
+</script>

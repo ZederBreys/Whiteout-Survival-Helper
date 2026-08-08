@@ -1,0 +1,800 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "WOS Helper" [ref=e3] [cursor=pointer]:
+      - /url: /
+    - link "Поиск" [ref=e4] [cursor=pointer]:
+      - /url: /search/
+      - generic [ref=e5]: 🔍
+      - generic [ref=e6]: Поиск по базе знаний...
+      - generic [ref=e7]: Ctrl K
+  - complementary "Боковая навигация" [ref=e8]:
+    - generic [ref=e9]:
+      - link "Разделы" [ref=e10] [cursor=pointer]:
+        - /url: /s/
+      - list [ref=e11]:
+        - listitem [ref=e12]:
+          - link "Арена и Освоение" [ref=e13] [cursor=pointer]:
+            - /url: /s/arena-i-osvoenie/
+        - listitem [ref=e14]:
+          - link "Бонусы(Баффы)" [ref=e15] [cursor=pointer]:
+            - /url: /s/bonusy-baffy/
+        - listitem [ref=e16]:
+          - link "Военное Бюро" [ref=e17] [cursor=pointer]:
+            - /url: /s/voennoe-byuro/
+        - listitem [ref=e18]:
+          - link "Герои" [ref=e19] [cursor=pointer]:
+            - /url: /s/geroi/
+        - listitem [ref=e20]:
+          - link "Комплекс" [ref=e21] [cursor=pointer]:
+            - /url: /s/kompleks/
+        - listitem [ref=e22]:
+          - link "Лабиринт" [ref=e23] [cursor=pointer]:
+            - /url: /s/labirint/
+        - listitem [ref=e24]:
+          - link "Ловушка на Медведя" [ref=e25] [cursor=pointer]:
+            - /url: /s/lovushka-na-medvedya/
+        - listitem [ref=e26]:
+          - link "Все герои" [ref=e27] [cursor=pointer]:
+            - /url: /s/vse-geroi/
+        - listitem [ref=e28]:
+          - link "Научный центр" [ref=e29] [cursor=pointer]:
+            - /url: /s/nauchnyj-tsentr/
+        - listitem [ref=e30]:
+          - link "Облики" [ref=e31] [cursor=pointer]:
+            - /url: /s/obliki/
+        - listitem [ref=e32]:
+          - link "Переход в другое государство" [ref=e33] [cursor=pointer]:
+            - /url: /s/perekhod-v-drugoe-gosudarstvo/
+        - listitem [ref=e34]:
+          - link "Питомцы" [ref=e35] [cursor=pointer]:
+            - /url: /s/pitomtsy/
+        - listitem [ref=e36]:
+          - link "Путь в ТУНДРУ" [ref=e37] [cursor=pointer]:
+            - /url: /s/put-v-tundru/
+        - listitem [ref=e38]:
+          - link "Рейды" [ref=e39] [cursor=pointer]:
+            - /url: /s/rejdy/
+        - listitem [ref=e40]:
+          - link "Снаряжение героев и губернатора" [ref=e41] [cursor=pointer]:
+            - /url: /s/snaryazhenie-geroev-i-gubernatora/
+        - listitem [ref=e42]:
+          - link "Советы" [ref=e43] [cursor=pointer]:
+            - /url: /s/sovety/
+        - listitem [ref=e44]:
+          - link "Таблицы" [ref=e45] [cursor=pointer]:
+            - /url: /s/tablitsy/
+        - listitem [ref=e46]:
+          - link "Учебный лагерь героев" [ref=e47] [cursor=pointer]:
+            - /url: /s/uchebnyj-lager-geroev/
+        - listitem [ref=e48]:
+          - link "Чемпионат Альянса" [ref=e49] [cursor=pointer]:
+            - /url: /s/chempionat-alyansa/
+        - listitem [ref=e50]:
+          - link "Эксперты" [ref=e51] [cursor=pointer]:
+            - /url: /s/eksperty/
+    - generic [ref=e52]:
+      - link "События" [ref=e53] [cursor=pointer]:
+        - /url: /e/
+      - list [ref=e54]:
+        - listitem [ref=e55]:
+          - link "Безумная Джо" [ref=e56] [cursor=pointer]:
+            - /url: /e/bezumnaya-dzho/
+        - listitem [ref=e57]:
+          - link "Битва в каньоне" [ref=e58] [cursor=pointer]:
+            - /url: /e/bitva-v-kanone/
+        - listitem [ref=e59]:
+          - link "Битва за Литейную" [ref=e60] [cursor=pointer]:
+            - /url: /e/bitva-za-litejnuyu/
+        - listitem [ref=e61]:
+          - link "Воспоминания о грезах" [ref=e62] [cursor=pointer]:
+            - /url: /e/vospominaniya-o-grezah/
+        - listitem [ref=e63]:
+          - link "Зал Губернатора" [ref=e64] [cursor=pointer]:
+            - /url: /e/zal-gubernatora/
+        - listitem [ref=e65]:
+          - link "Король ледяного поля" [ref=e66] [cursor=pointer]:
+            - /url: /e/korol-ledyanogo-polya/
+        - listitem [ref=e67]:
+          - link "Морозное сокровище" [ref=e68] [cursor=pointer]:
+            - /url: /e/moroznoe-sokrovishe/
+        - listitem [ref=e69]:
+          - link "Мощь Государства(СВС)" [ref=e70] [cursor=pointer]:
+            - /url: /e/moshch-gosudarstva-svs/
+        - listitem [ref=e71]:
+          - link "Приключение звёзд-близнецов" [ref=e72] [cursor=pointer]:
+            - /url: /e/priklyuchenie-zvyozd-bliznetsov/
+        - listitem [ref=e73]:
+          - link "Путь Света" [ref=e74] [cursor=pointer]:
+            - /url: /e/put-sveta/
+        - listitem [ref=e75]:
+          - link "Рудник ледяного огня" [ref=e76] [cursor=pointer]:
+            - /url: /e/rudnik-ledyanogo-ognya/
+        - listitem [ref=e77]:
+          - link "Рыболовный турнир" [ref=e78] [cursor=pointer]:
+            - /url: /e/rybolovnyj-turnir/
+        - listitem [ref=e79]:
+          - link "Снегоуборщики" [ref=e80] [cursor=pointer]:
+            - /url: /e/snegouborshiki/
+        - listitem [ref=e81]:
+          - link "Форты и Крепости" [ref=e82] [cursor=pointer]:
+            - /url: /e/forty-i-kreposti/
+  - main [ref=e83]:
+    - navigation "Хлебные крошки" [ref=e84]:
+      - link "Главная" [ref=e85] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e86]: /
+      - link "Разделы" [ref=e87] [cursor=pointer]:
+        - /url: /s/
+      - generic [ref=e88]: /
+      - generic [ref=e89]: Все герои
+    - heading "Все герои" [level=1] [ref=e90]
+    - table [ref=e92]:
+      - rowgroup [ref=e93]:
+        - row [ref=e94]:
+          - columnheader "Герой" [ref=e95]
+          - columnheader "Войска" [ref=e96]
+          - columnheader "Поколение" [ref=e97]
+          - columnheader "Способ получения" [ref=e98]
+          - columnheader "Ключевая мета-роль и Стратегическая ценность" [ref=e99]
+      - rowgroup [ref=e100]:
+        - row [ref=e101]:
+          - cell "Смит Смит (Smith)" [ref=e102]:
+            - img "Смит" [ref=e104]
+            - generic [ref=e105]:
+              - text: Смит
+              - generic [ref=e106]: (Smith)
+          - cell "Пехота" [ref=e107]
+          - cell "1" [ref=e108]
+          - cell "Экспедиция (исследования), Разведка Маяка, Вербовка героев" [ref=e110]
+          - 'cell "Мастер-кузнец: лучший ранний буст железа (экономика) + урон по площади. Слаб в поздней игре против Epic/Mythic. Обязателен для F2P-железа." [ref=e111]'
+        - row [ref=e112]:
+          - cell "Евгений Евгений (Eugene)" [ref=e113]:
+            - img "Евгений" [ref=e115]
+            - generic [ref=e116]:
+              - text: Евгений
+              - generic [ref=e117]: (Eugene)
+          - cell "Пехота" [ref=e118]
+          - cell "1" [ref=e119]
+          - cell "Экспедиция (исследования), Разведка Маяка, Вербовка героев" [ref=e121]
+          - 'cell "Лесоруб-ветеран: стабильный доход древесины, экономика лесопилки. Хорошая ранняя пехота для арены." [ref=e122]'
+        - row [ref=e123]:
+          - cell "Чарли Чарли (Charlie)" [ref=e124]:
+            - img "Чарли" [ref=e126]
+            - generic [ref=e127]:
+              - text: Чарли
+              - generic [ref=e128]: (Charlie)
+          - cell "Копейщик" [ref=e129]
+          - cell "1" [ref=e130]
+          - cell "Экспедиция (исследования), Разведка Маяка, Вербовка героев" [ref=e132]
+          - 'cell "Эксперт по сносу: угольная экономика + контроль по площади (оглушение). Не ядро ралли." [ref=e133]'
+        - row [ref=e134]:
+          - cell "Клорис Клорис (Cloris)" [ref=e135]:
+            - img "Клорис" [ref=e137]
+            - generic [ref=e138]:
+              - text: Клорис
+              - generic [ref=e139]: (Cloris)
+          - cell "Стрелок" [ref=e140]
+          - cell "1" [ref=e141]
+          - cell "Экспедиция (исследования), Разведка Маяка, Вербовка героев" [ref=e143]
+          - 'cell "Охотник: экономика еды + дальний AoE-урон. Заменяется эпическими стрелками позже." [ref=e144]'
+        - row [ref=e145]:
+          - cell "Сергей Сергей (Sergey)" [ref=e146]:
+            - img "Сергей" [ref=e148]
+            - generic [ref=e149]:
+              - text: Сергей
+              - generic [ref=e150]: (Sergey)
+          - cell "Пехота" [ref=e151]
+          - cell "1" [ref=e152]
+          - cell "Экспедиция (исследования), Разведка Маяка, Вербовка героев" [ref=e154]
+          - 'cell "Ветеран Соляриса: передовой танк + дебафф. С Джесси — основа F2P-танка." [ref=e155]'
+        - row [ref=e156]:
+          - cell "Джесси Джесси (Jessie)" [ref=e157]:
+            - img "Джесси" [ref=e159]
+            - generic [ref=e160]:
+              - text: Джесси
+              - generic [ref=e161]: (Jessie)
+          - cell "Копейщик" [ref=e162]
+          - cell "1" [ref=e163]
+          - cell "Разведка Маяка, Вербовка героев" [ref=e165]
+          - 'cell "Инженер-стрелок: лидер сплочения в начале игры, урон войскам + снижение урона." [ref=e166]'
+        - row [ref=e167]:
+          - cell "Патрик Патрик (Patrick)" [ref=e168]:
+            - img "Патрик" [ref=e170]
+            - generic [ref=e171]:
+              - text: Патрик
+              - generic [ref=e172]: (Patrick)
+          - cell "Копейщик" [ref=e173]
+          - cell "1" [ref=e174]
+          - cell "Разведка Маяка, Вербовка героев" [ref=e176]
+          - 'cell "Повар-защитник: лечение и усиления, выживание в длинных PvE-боях." [ref=e177]'
+        - row [ref=e178]:
+          - cell "Лумак Бокан Лумак Бокан (Lumak Bokan)" [ref=e179]:
+            - img "Лумак Бокан" [ref=e181]
+            - generic [ref=e182]:
+              - text: Лумак Бокан
+              - generic [ref=e183]: (Lumak Bokan)
+          - cell "Копейщик" [ref=e184]
+          - cell "1" [ref=e185]
+          - cell "Вербовка героев" [ref=e187]
+          - 'cell "Племенной тактик: специалист по охоте на зверя/Полярному террору, дебаффы, скорость охотничьего марша." [ref=e188]'
+        - row [ref=e189]:
+          - cell "Лин Сюэ Лин Сюэ (Ling Xue)" [ref=e190]:
+            - img "Лин Сюэ" [ref=e192]
+            - generic [ref=e193]:
+              - text: Лин Сюэ
+              - generic [ref=e194]: (Ling Xue)
+          - cell "Копейщик" [ref=e195]
+          - cell "1" [ref=e196]
+          - cell "Вербовка героев" [ref=e198]
+          - 'cell "Дисциплинированный воин: большое AoE, баффы атаки отряда, скорость тренировки." [ref=e199]'
+        - row [ref=e200]:
+          - cell "Джина Джина (Gina)" [ref=e201]:
+            - img "Джина" [ref=e203]
+            - generic [ref=e204]:
+              - text: Джина
+              - generic [ref=e205]: (Gina)
+          - cell "Стрелок" [ref=e206]
+          - cell "1" [ref=e207]
+          - cell "Месть Джины" [ref=e209]
+          - 'cell "Командир наёмников: AoE-утилита + скорость марша, чистка мобов." [ref=e210]'
+        - row [ref=e211]:
+          - cell "Бахити Бахити (Bahiti)" [ref=e212]:
+            - img "Бахити" [ref=e214]
+            - generic [ref=e215]:
+              - text: Бахити
+              - generic [ref=e216]: (Bahiti)
+          - cell "Стрелок" [ref=e217]
+          - cell "1" [ref=e218]
+          - cell "Разведка Маяка, Вербовка героев, Миссия героя" [ref=e220]
+          - 'cell "Курьер Альянса Рассвета: лучший эпический ДПС по одной цели, сильный разведчик." [ref=e221]'
+        - row [ref=e222]:
+          - cell "Джассер Джассер (Jasser)" [ref=e223]:
+            - img "Джассер" [ref=e225]
+            - generic [ref=e226]:
+              - text: Джассер
+              - generic [ref=e227]: (Jasser)
+          - cell "Стрелок" [ref=e228]
+          - cell "1" [ref=e229]
+          - cell "Вербовка героев" [ref=e231]
+          - 'cell "Учёный-выживальщик: гибридный ДПС + скорость исследований." [ref=e232]'
+        - row [ref=e233]:
+          - cell "Со Юн Со Юн (Seo-yoon)" [ref=e234]:
+            - img "Со Юн" [ref=e236]
+            - generic [ref=e237]:
+              - text: Со Юн
+              - generic [ref=e238]: (Seo-yoon)
+          - cell "Стрелок" [ref=e239]
+          - cell "1" [ref=e240]
+          - cell "Вербовка героев" [ref=e242]
+          - 'cell "Барабанщик боевого духа: буфер команды, скорость лечения, поддержка." [ref=e243]'
+        - row [ref=e244]:
+          - cell "Наталия Наталия (Natalia)" [ref=e245]:
+            - img "Наталия" [ref=e247]
+            - generic [ref=e248]:
+              - text: Наталия
+              - generic [ref=e249]: (Natalia)
+          - cell "Пехота" [ref=e250]
+          - cell "1" [ref=e251]
+          - cell "Первая покупка, VIP-наборы" [ref=e253]
+          - 'cell "Наездник на медведе: оглушение, усиление атаки войск. Открывается любой покупкой." [ref=e254]'
+        - row [ref=e255]:
+          - cell "Херонимо Херонимо (Jeronimo)" [ref=e256]:
+            - img "Херонимо" [ref=e258]
+            - generic [ref=e259]:
+              - text: Херонимо
+              - generic [ref=e260]: (Jeronimo)
+          - cell "Пехота" [ref=e261]
+          - cell "1" [ref=e262]
+          - cell "VIP-наборы" [ref=e264]
+          - 'cell "Дуэлянт/лидер сплочения: урон по отряду + шанс оглушения. Премиальный герой (VIP-наборы)." [ref=e265]'
+        - row [ref=e266]:
+          - cell "Молли Молли (Molly)" [ref=e267]:
+            - img "Молли" [ref=e269]
+            - generic [ref=e270]:
+              - text: Молли
+              - generic [ref=e271]: (Molly)
+          - cell "Копейщик" [ref=e272]
+          - cell "1" [ref=e273]
+          - cell "Подарок за 7-дневный вход, Благословение Молли, Разведка Маяка, Вербовка героев, Зал героев" [ref=e275]
+          - cell "Буферы для сбора + солидное исследование AoE. Бесплатные осколки за 7-дневный вход — стартовый герой." [ref=e276]
+        - row [ref=e277]:
+          - cell "Зинман Зинман (Zinman)" [ref=e278]:
+            - img "Зинман" [ref=e280]
+            - generic [ref=e281]:
+              - text: Зинман
+              - generic [ref=e282]: (Zinman)
+          - cell "Стрелок" [ref=e283]
+          - cell "1" [ref=e284]
+          - cell "Колесо удачи, Ежедневные предложения, Осколки мифического генерала" [ref=e286]
+          - 'cell "Герой-строитель: снижение стоимости строительства + скорость улучшения, усиление войск. Колесо удачи Gen 1." [ref=e287]'
+        - row [ref=e288]:
+          - cell "Флинт Флинт (Flint)" [ref=e289]:
+            - img "Флинт" [ref=e291]
+            - generic [ref=e292]:
+              - text: Флинт
+              - generic [ref=e293]: (Flint)
+          - cell "Пехота" [ref=e294]
+          - cell "2" [ref=e295]
+          - cell "Колесо удачи" [ref=e297]
+          - cell "Передовой танк и специалист по ожогам (огнемёт). Основная цель F2P Колеса удачи Gen 2." [ref=e298]
+        - row [ref=e299]:
+          - cell "Филипп Филипп (Philly)" [ref=e300]:
+            - img "Филипп" [ref=e302]
+            - generic [ref=e303]:
+              - text: Филипп
+              - generic [ref=e304]: (Philly)
+          - cell "Копейщик" [ref=e305]
+          - cell "2" [ref=e306]
+          - cell "Король Ледяного поля, Битва за мощь (SVS), Ежедневные предложения" [ref=e308]
+          - cell "Первый крупный целитель/поддержка с ядом и поддержкой ралли. Силён в длинных розыгрышах." [ref=e309]
+        - row [ref=e310]:
+          - cell "Алонсо Алонсо (Alonso)" [ref=e311]:
+            - img "Алонсо" [ref=e313]
+            - generic [ref=e314]:
+              - text: Алонсо
+              - generic [ref=e315]: (Alonso)
+          - cell "Стрелок" [ref=e316]
+          - cell "2" [ref=e317]
+          - cell "Зал героев, Ежедневные предложения" [ref=e319]
+          - cell "ДПС с командным оглушением и усилителем урона." [ref=e320]
+        - row [ref=e321]:
+          - cell "Логан Логан (Logan)" [ref=e322]:
+            - img "Логан" [ref=e324]
+            - generic [ref=e325]:
+              - text: Логан
+              - generic [ref=e326]: (Logan)
+          - cell "Пехота" [ref=e327]
+          - cell "3" [ref=e328]
+          - cell "Зал героев, Ежедневные предложения" [ref=e330]
+          - 'cell "Передовой танк-киборг: замедление скорости атаки противника." [ref=e331]'
+        - row [ref=e332]:
+          - cell "Мия Мия (Mia)" [ref=e333]:
+            - img "Мия" [ref=e335]
+            - generic [ref=e336]:
+              - text: Мия
+              - generic [ref=e337]: (Mia)
+          - cell "Копейщик" [ref=e338]
+          - cell "3" [ref=e339]
+          - cell "Колесо удачи, Ежедневные предложения" [ref=e341]
+          - cell "Взрывная поддержка ралли (Кристалл Судьбы). Основной источник — Колесо удачи Gen 3." [ref=e342]
+        - row [ref=e343]:
+          - cell "Грег Грег (Greg)" [ref=e344]:
+            - img "Грег" [ref=e346]
+            - generic [ref=e347]:
+              - text: Грег
+              - generic [ref=e348]: (Greg)
+          - cell "Стрелок" [ref=e349]
+          - cell "3" [ref=e350]
+          - cell "Король Ледяного поля, Битва за мощь (SVS), Ежедневные предложения" [ref=e352]
+          - cell "ДПС и контроль (Государственный указ). Часто герой событий/ежедневных сделок." [ref=e353]
+        - row [ref=e354]:
+          - cell "Ахмос Ахмос (Ahmose)" [ref=e355]:
+            - img "Ахмос" [ref=e357]
+            - generic [ref=e358]:
+              - text: Ахмос
+              - generic [ref=e359]: (Ahmose)
+          - cell "Пехота" [ref=e360]
+          - cell "4" [ref=e361]
+          - cell "Король Ледяного поля, Битва за мощь (SVS), Ежедневные предложения" [ref=e363]
+          - cell "Передовая линия щита и копья (Реликвия Стража)." [ref=e364]
+        - row [ref=e365]:
+          - cell "Райна Райна (Reina)" [ref=e366]:
+            - img "Райна" [ref=e368]
+            - generic [ref=e369]:
+              - text: Райна
+              - generic [ref=e370]: (Reina)
+          - cell "Копейщик" [ref=e371]
+          - cell "4" [ref=e372]
+          - cell "Зал героев, Ежедневные предложения" [ref=e374]
+          - cell "Засада ниндзя и усиление урона (Ниндзякен — Райкири). Не герой Колеса удачи." [ref=e375]
+        - row [ref=e376]:
+          - cell "Линн Линн (Lynn)" [ref=e377]:
+            - img "Линн" [ref=e379]
+            - generic [ref=e380]:
+              - text: Линн
+              - generic [ref=e381]: (Lynn)
+          - cell "Стрелок" [ref=e382]
+          - cell "4" [ref=e383]
+          - cell "Колесо удачи" [ref=e385]
+          - cell "Поддержка барда + проникающий ДПС (Слеза Эллы). F2P №1 на Колесе удачи Gen 4." [ref=e386]
+        - row [ref=e387]:
+          - cell "Хектор Хектор (Hector)" [ref=e388]:
+            - img "Хектор" [ref=e390]
+            - generic [ref=e391]:
+              - text: Хектор
+              - generic [ref=e392]: (Hector)
+          - cell "Пехота" [ref=e393]
+          - cell "5" [ref=e394]
+          - cell "Колесо удачи, Зал героев, Ежедневные предложения, Осколки мифического генерала" [ref=e396]
+          - cell "Передовая линия гладиаторов, иммунитет к контролю. Колесо удачи Gen 5." [ref=e397]
+        - row [ref=e398]:
+          - cell "Нора Нора (Norah)" [ref=e399]:
+            - img "Нора" [ref=e401]
+            - generic [ref=e402]:
+              - text: Нора
+              - generic [ref=e403]: (Norah)
+          - cell "Копейщик" [ref=e404]
+          - cell "5" [ref=e405]
+          - cell "Король Ледяного поля, Битва за мощь (SVS), Ежедневные предложения, Осколки мифического генерала" [ref=e407]
+          - cell "Байкер-гренадер, раллийный стратег. Не главный герой Колеса удачи." [ref=e408]
+        - row [ref=e409]:
+          - cell "Гвен Гвен (Gwen)" [ref=e410]:
+            - img "Гвен" [ref=e412]
+            - generic [ref=e413]:
+              - text: Гвен
+              - generic [ref=e414]: (Gwen)
+          - cell "Стрелок" [ref=e415]
+          - cell "5" [ref=e416]
+          - cell "Зал героев, Ежедневные предложения, Осколки мифического генерала" [ref=e418]
+          - 'cell "Стрелок-митинг: AoE задней линии, комплект воздушного удара." [ref=e419]'
+        - row [ref=e420]:
+          - cell "У Мин У Мин (Wu Ming)" [ref=e421]:
+            - img "У Мин" [ref=e423]
+            - generic [ref=e424]:
+              - text: У Мин
+              - generic [ref=e425]: (Wu Ming)
+          - cell "Пехота" [ref=e426]
+          - cell "6" [ref=e427]
+          - cell "Зал героев" [ref=e429]
+          - 'cell "Мастер боевых искусств: высокое HP, окно неуязвимости, смягчение урона отряда. Зал героев." [ref=e430]'
+        - row [ref=e431]:
+          - cell "Рене Рене (Renee)" [ref=e432]:
+            - img "Рене" [ref=e434]
+            - generic [ref=e435]:
+              - text: Рене
+              - generic [ref=e436]: (Renee)
+          - cell "Копейщик" [ref=e437]
+          - cell "6" [ref=e438]
+          - cell "Колесо удачи" [ref=e440]
+          - cell "Дебаффер (замешательство), усиление командного урона. Самый доступный F2P герой Gen 6." [ref=e441]
+        - row [ref=e442]:
+          - cell "Уэйн Уэйн (Wayne)" [ref=e443]:
+            - img "Уэйн" [ref=e445]
+            - generic [ref=e446]:
+              - text: Уэйн
+              - generic [ref=e447]: (Wayne)
+          - cell "Стрелок" [ref=e448]
+          - cell "6" [ref=e449]
+          - cell "Зал вождей, Король Ледяного поля, Битва за мощь (SVS), Ежедневные предложения, Ралли героев" [ref=e451]
+          - 'cell "Охотник за головами: высшая АТК исследования Gen 6, критический урон." [ref=e452]'
+        - row [ref=e453]:
+          - cell "Эдит Эдит (Edith)" [ref=e454]:
+            - img "Эдит" [ref=e456]
+            - generic [ref=e457]:
+              - text: Эдит
+              - generic [ref=e458]: (Edith)
+          - cell "Пехота" [ref=e459]
+          - cell "7" [ref=e460]
+          - cell "Зал вождей, Король Ледяного поля, Битва за мощь (SVS), Ежедневные предложения, Ралли героев" [ref=e462]
+          - 'cell "Механический гений: основной танк маршей Gen 7+, высший уровень разведки." [ref=e463]'
+        - row [ref=e464]:
+          - cell "Гордон Гордон (Gordon)" [ref=e465]:
+            - img "Гордон" [ref=e467]
+            - generic [ref=e468]:
+              - text: Гордон
+              - generic [ref=e469]: (Gordon)
+          - cell "Копейщик" [ref=e470]
+          - cell "7" [ref=e471]
+          - cell "Зал героев" [ref=e473]
+          - 'cell "Учёный-токсиколог: сильный яд/дебафф лансер. Низший F2P-приоритет из тройки." [ref=e474]'
+        - row [ref=e475]:
+          - cell "Брэдли Брэдли (Bradley)" [ref=e476]:
+            - img "Брэдли" [ref=e478]
+            - generic [ref=e479]:
+              - text: Брэдли
+              - generic [ref=e480]: (Bradley)
+          - cell "Стрелок" [ref=e481]
+          - cell "7" [ref=e482]
+          - cell "Колесо удачи" [ref=e484]
+          - 'cell "Ветеран артиллерии: ралли/задняя линия S-уровня, усилители атаки всего отряда. Колесо удачи Gen 7." [ref=e485]'
+        - row [ref=e486]:
+          - cell "Гатот Гатот (Gatot)" [ref=e487]:
+            - img "Гатот" [ref=e489]
+            - generic [ref=e490]:
+              - text: Гатот
+              - generic [ref=e491]: (Gatot)
+          - cell "Пехота" [ref=e492]
+          - cell "8" [ref=e493]
+          - cell "Колесо удачи, Осколки мифического генерала" [ref=e495]
+          - 'cell "Командир в изгнании: танк-щит с уменьшением атаки противника. Колесо удачи Gen 8." [ref=e496]'
+        - row [ref=e497]:
+          - cell "Соня Соня (Sonya)" [ref=e498]:
+            - img "Соня" [ref=e500]
+            - generic [ref=e501]:
+              - text: Соня
+              - generic [ref=e502]: (Sonya)
+          - cell "Копейщик" [ref=e503]
+          - cell "8" [ref=e504]
+          - cell "Зал вождей, Король Ледяного поля, Битва за мощь (SVS), Ежедневные предложения, Ралли героев, Осколки мифического генерала" [ref=e506]
+          - 'cell "Падшая королева: ралли Top Gen 8 / Bear DPS, криозаморозка и усилители урона." [ref=e507]'
+        - row [ref=e508]:
+          - cell "Хендрик Хендрик (Hendrik)" [ref=e509]:
+            - img "Хендрик" [ref=e511]
+            - generic [ref=e512]:
+              - text: Хендрик
+              - generic [ref=e513]: (Hendrik)
+          - cell "Стрелок" [ref=e514]
+          - cell "8" [ref=e515]
+          - cell "Зал героев, Осколки мифического генерала" [ref=e517]
+          - 'cell "Капитан «Нептуна»: уничтожение защиты противника, усиление командной защиты." [ref=e518]'
+        - row [ref=e519]:
+          - cell "Магнус Магнус (Magnus)" [ref=e520]:
+            - img "Магнус" [ref=e522]
+            - generic [ref=e523]:
+              - text: Магнус
+              - generic [ref=e524]: (Magnus)
+          - cell "Пехота" [ref=e525]
+          - cell "9" [ref=e526]
+          - cell "Зал героев" [ref=e528]
+          - 'cell "Танк-искатель приключений: высшая мощь Gen 9, насмешка, синергия пехоты и стрелков." [ref=e529]'
+        - row [ref=e530]:
+          - cell "Фред Фред (Fred)" [ref=e531]:
+            - img "Фред" [ref=e533]
+            - generic [ref=e534]:
+              - text: Фред
+              - generic [ref=e535]: (Fred)
+          - cell "Копейщик" [ref=e536]
+          - cell "9" [ref=e537]
+          - cell "Колесо удачи" [ref=e539]
+          - 'cell "Пожарный герой: лансер с дебаффом кислоты/воды, крошит защиту. Колесо удачи Gen 9." [ref=e540]'
+        - row [ref=e541]:
+          - cell "Ксура Ксура (Xura)" [ref=e542]:
+            - img "Ксура" [ref=e544]
+            - generic [ref=e545]:
+              - text: Ксура
+              - generic [ref=e546]: (Xura)
+          - cell "Стрелок" [ref=e547]
+          - cell "9" [ref=e548]
+          - cell "Зал вождей, Король Ледяного поля, Битва за мощь (SVS), Ежедневные предложения" [ref=e550]
+          - 'cell "Целитель-ветровка: поддержка с командным смягчением и уроном." [ref=e551]'
+        - row [ref=e552]:
+          - cell "Грегори Грегори (Gregory)" [ref=e553]:
+            - img "Грегори" [ref=e555]
+            - generic [ref=e556]:
+              - text: Грегори
+              - generic [ref=e557]: (Gregory)
+          - cell "Пехота" [ref=e558]
+          - cell "10" [ref=e559]
+          - cell "Зал вождей, Король Ледяного поля, Битва за мощь (SVS), Ежедневные предложения, Ралли героев, Осколки мифического генерала" [ref=e561]
+          - 'cell "Последний рыцарь Соляриса: высшая мощь Gen 10, командные усиления ATK/DEF, снижение урона." [ref=e562]'
+        - row [ref=e563]:
+          - cell "Фрейя Фрейя (Freya)" [ref=e564]:
+            - img "Фрейя" [ref=e566]
+            - generic [ref=e567]:
+              - text: Фрейя
+              - generic [ref=e568]: (Freya)
+          - cell "Копейщик" [ref=e569]
+          - cell "10" [ref=e570]
+          - cell "Зал героев, Осколки мифического генерала" [ref=e572]
+          - 'cell "Иммунный страж «Кровавой Луны»: цепочка AoE, метка распределения урона, окна крита." [ref=e573]'
+        - row [ref=e574]:
+          - cell "Бланшетт Бланшетт (Blanchette)" [ref=e575]:
+            - img "Бланшетт" [ref=e577]
+            - generic [ref=e578]:
+              - text: Бланшетт
+              - generic [ref=e579]: (Blanchette)
+          - cell "Стрелок" [ref=e580]
+          - cell "10" [ref=e581]
+          - cell "Колесо удачи, Осколки мифического генерала" [ref=e583]
+          - 'cell "Защитник приюта: взрывной стрелок, урон по нескольким целям, лечебный блок. Колесо удачи Gen 10." [ref=e584]'
+        - row [ref=e585]:
+          - cell "Элеонора Элеонора (Eleonora)" [ref=e586]:
+            - img "Элеонора" [ref=e588]
+            - generic [ref=e589]:
+              - text: Элеонора
+              - generic [ref=e590]: (Eleonora)
+          - cell "Пехота" [ref=e591]
+          - cell "11" [ref=e592]
+          - cell "Колесо удачи, Осколки мифического генерала, Литейный магазин" [ref=e594]
+          - 'cell "Изгнанная королева Солярис: высшая мощь Gen 11, отражение щита, усиление здоровья/урона." [ref=e595]'
+        - row [ref=e596]:
+          - cell "Ллойд Ллойд (Lloyd)" [ref=e597]:
+            - img "Ллойд" [ref=e599]
+            - generic [ref=e600]:
+              - text: Ллойд
+              - generic [ref=e601]: (Lloyd)
+          - cell "Копейщик" [ref=e602]
+          - cell "11" [ref=e603]
+          - cell "Зал вождей, Король Ледяного поля, Битва за мощь (SVS), Ежедневные предложения, Ралли героев, Осколки мифического генерала, Литейный магазин" [ref=e605]
+          - 'cell "Ремесленник из Остермора: механический улан, выявление слабостей, смертоносное уничтожение." [ref=e606]'
+        - row [ref=e607]:
+          - cell "Руфус Руфус (Rufus)" [ref=e608]:
+            - img "Руфус" [ref=e610]
+            - generic [ref=e611]:
+              - text: Руфус
+              - generic [ref=e612]: (Rufus)
+          - cell "Стрелок" [ref=e613]
+          - cell "11" [ref=e614]
+          - cell "Зал героев, Осколки мифического генерала, Литейный магазин" [ref=e616]
+          - 'cell "Странник глубин: AoE-гренадер, метеор, зоны горения, дебаффы летальности." [ref=e617]'
+        - row [ref=e618]:
+          - cell "Хервор Хервор (Hervor)" [ref=e619]:
+            - img "Хервор" [ref=e621]
+            - generic [ref=e622]:
+              - text: Хервор
+              - generic [ref=e623]: (Hervor)
+          - cell "Пехота" [ref=e624]
+          - cell "12" [ref=e625]
+          - cell "Зал героев, Осколки мифического генерала, Литейный магазин" [ref=e627]
+          - 'cell "Ледяная королева Сатла: высшая мощь Gen 12, оглушение, иммунитет к контролю." [ref=e628]'
+        - row [ref=e629]:
+          - cell "Кароль Кароль (Karol)" [ref=e630]:
+            - img "Кароль" [ref=e632]
+            - generic [ref=e633]:
+              - text: Кароль
+              - generic [ref=e634]: (Karol)
+          - cell "Копейщик" [ref=e635]
+          - cell "12" [ref=e636]
+          - cell "Колесо удачи, Осколки мифического генерала, Литейный магазин" [ref=e638]
+          - 'cell "Кавалерия Орлиной бригады: уничтожение AoE DEF, усиление против пехоты." [ref=e639]'
+        - row [ref=e640]:
+          - cell "Лигея Лигея (Ligeia)" [ref=e641]:
+            - img "Лигея" [ref=e643]
+            - generic [ref=e644]:
+              - text: Лигея
+              - generic [ref=e645]: (Ligeia)
+          - cell "Стрелок" [ref=e646]
+          - cell "12" [ref=e647]
+          - cell "Зал вождей, Король Ледяного поля, Битва за мощь (SVS), Ежедневные предложения, Ралли героев, Осколки мифического генерала, Литейный магазин" [ref=e649]
+          - 'cell "Шпион/певец Соляриса: стрелок-механик-паук, кислота AoE, ловушки отражения урона." [ref=e650]'
+        - row [ref=e651]:
+          - cell "Гизела Гизела (Gisela)" [ref=e652]:
+            - img "Гизела" [ref=e654]
+            - generic [ref=e655]:
+              - text: Гизела
+              - generic [ref=e656]: (Gisela)
+          - cell "Пехота" [ref=e657]
+          - cell "13" [ref=e658]
+          - cell "Зал вождей, Король Ледяного поля, Битва за мощь (SVS), Ежедневные предложения, Ралли героев, Осколки мифического генерала, Литейный магазин" [ref=e660]
+          - 'cell "Защитник с механическими руками: высшая мощь Gen 13, энергетический щит, командная защита." [ref=e661]'
+        - row [ref=e662]:
+          - cell "Флора Флора (Flora)" [ref=e663]:
+            - img "Флора" [ref=e665]
+            - generic [ref=e666]:
+              - text: Флора
+              - generic [ref=e667]: (Flora)
+          - cell "Копейщик" [ref=e668]
+          - cell "13" [ref=e669]
+          - cell "Зал героев, Осколки мифического генерала, Литейный магазин" [ref=e671]
+          - 'cell "Культиватор Адориа: контроль виноградной лозы, призыв Адории Роуз, усиление урона." [ref=e672]'
+        - row [ref=e673]:
+          - cell "Вулкан Вулкан (Vulcanus)" [ref=e674]:
+            - img "Вулкан" [ref=e676]
+            - generic [ref=e677]:
+              - text: Вулкан
+              - generic [ref=e678]: (Vulcanus)
+          - cell "Стрелок" [ref=e679]
+          - cell "13" [ref=e680]
+          - cell "Колесо удачи, Осколки мифического генерала, Литейный магазин" [ref=e682]
+          - 'cell "Король Подгорода: стрелок с кровотечением, оглушающий дротик, дебаффы ATK/DEF." [ref=e683]'
+        - row [ref=e684]:
+          - cell "Элиф Элиф (Elif)" [ref=e685]:
+            - img "Элиф" [ref=e687]
+            - generic [ref=e688]:
+              - text: Элиф
+              - generic [ref=e689]: (Elif)
+          - cell "Пехота" [ref=e690]
+          - cell "14" [ref=e691]
+          - cell "Колесо удачи, Осколки мифического генерала, Литейный магазин" [ref=e693]
+          - 'cell "Танцовщик-защитник: абсолютная защита Gen 14, ралли обороны и гарнизона, уклонение." [ref=e694]'
+        - row [ref=e695]:
+          - cell "Доминик Доминик (Dominic)" [ref=e696]:
+            - img "Доминик" [ref=e698]
+            - generic [ref=e699]:
+              - text: Доминик
+              - generic [ref=e700]: (Dominic)
+          - cell "Копейщик" [ref=e701]
+          - cell "14" [ref=e702]
+          - cell "Зал вождей, Король Ледяного поля, Битва за мощь (SVS), Ежедневные предложения, Ралли героев, Литейный магазин" [ref=e704]
+          - 'cell "Мастер-иллюзионист: ралли нападения и PvP-взрыв, ядовитые шипы улана, возрождение раз в бой." [ref=e705]'
+        - row [ref=e706]:
+          - cell "Кара Кара (Cara)" [ref=e707]:
+            - img "Кара" [ref=e709]
+            - generic [ref=e710]:
+              - text: Кара
+              - generic [ref=e711]: (Cara)
+          - cell "Стрелок" [ref=e712]
+          - cell "14" [ref=e713]
+          - cell "Зал героев, Осколки мифического генерала, Литейный магазин" [ref=e715]
+          - 'cell "Курьер и снайпер Остермора: высший ДПС задней линии Gen 14, снижение точности противника." [ref=e716]'
+        - row [ref=e717]:
+          - cell "Хэнк Хэнк (Hank)" [ref=e718]:
+            - img "Хэнк" [ref=e720]
+            - generic [ref=e721]:
+              - text: Хэнк
+              - generic [ref=e722]: (Hank)
+          - cell "Пехота" [ref=e723]
+          - cell "15" [ref=e724]
+          - cell "Зал героев, Осколки мифического генерала, Литейный магазин" [ref=e726]
+          - 'cell "Агрессивный выносливый громила: летальность + самоисцеление, вампиризм. Эксклюзив Зала героев Gen 15." [ref=e727]'
+        - row [ref=e728]:
+          - cell "Эстрелла Эстрелла (Estrella)" [ref=e729]:
+            - img "Эстрелла" [ref=e731]
+            - generic [ref=e732]:
+              - text: Эстрелла
+              - generic [ref=e733]: (Estrella)
+          - cell "Копейщик" [ref=e734]
+          - cell "15" [ref=e735]
+          - cell "Колесо удачи, Осколки мифического генерала, Литейный магазин" [ref=e737]
+          - cell "AoE DPS, дебаффы и контроль толпы. Лучший F2P-приоритет урона Gen 15 (Колесо удачи)." [ref=e738]
+        - row [ref=e739]:
+          - cell "Вивека Вивека (Viveca)" [ref=e740]:
+            - img "Вивека" [ref=e742]
+            - generic [ref=e743]:
+              - text: Вивека
+              - generic [ref=e744]: (Viveca)
+          - cell "Стрелок" [ref=e745]
+          - cell "15" [ref=e746]
+          - cell "Зал вождей, Король Ледяного поля, Битва за мощь (SVS), Ежедневные предложения, Ралли героев, Осколки мифического генерала, Литейный магазин" [ref=e748]
+          - 'cell "Убийца с одиночной стрельбой (Ночная стража): стеклянная пушка, высшая атака, низкое HP." [ref=e749]'
+        - row [ref=e750]:
+          - cell "Зейгел Зейгел (Seigel)" [ref=e751]:
+            - img "Зейгел" [ref=e753]
+            - generic [ref=e754]:
+              - text: Зейгел
+              - generic [ref=e755]: (Seigel)
+          - cell "Пехота" [ref=e756]
+          - cell "16" [ref=e757]
+          - cell "Король Ледяного поля, Битва за мощь (SVS), Ралли героев, Осколки мифического генерала, Литейный магазин" [ref=e759]
+          - 'cell "Ультра-танк передовой линии: отражение урона, высокое HP, защитные навыки экспедиции." [ref=e760]'
+        - row [ref=e761]:
+          - cell "Урсар Урсар (Ursar)" [ref=e762]:
+            - img "Урсар" [ref=e764]
+            - generic [ref=e765]:
+              - text: Урсар
+              - generic [ref=e766]: (Ursar)
+          - cell "Копейщик" [ref=e767]
+          - cell "16" [ref=e768]
+          - cell "Зал героев, Осколки мифического генерала, Литейный магазин" [ref=e770]
+          - 'cell "Поддержка ДПС: положительные эффекты, яд, негативные эффекты. Эксклюзив Зала героев Gen 16." [ref=e771]'
+        - row [ref=e772]:
+          - cell "Эслинг Эслинг (Aisling)" [ref=e773]:
+            - img "Эслинг" [ref=e775]
+            - generic [ref=e776]:
+              - text: Эслинг
+              - generic [ref=e777]: (Aisling)
+          - cell "Стрелок" [ref=e778]
+          - cell "16" [ref=e779]
+          - cell "Колесо удачи, Осколки мифического генерала, Литейный магазин" [ref=e781]
+          - 'cell "Лесной страж: оглушение по площади, лечение, взрыв стрелка. F2P Колесо удачи Gen 16." [ref=e782]'
+        - row [ref=e783]:
+          - cell "Айден Айден (Aiden)" [ref=e784]:
+            - img "Айден" [ref=e786]
+            - generic [ref=e787]:
+              - text: Айден
+              - generic [ref=e788]: (Aiden)
+          - cell "Пехота" [ref=e789]
+          - cell "17" [ref=e790]
+          - cell "Колесо удачи, Осколки мифического генерала, Литейный магазин" [ref=e792]
+          - 'cell "Танк передовой линии: щит со снижением урона, AoE-урон в режиме уничтожения, усиление атаки/защиты пехоты. Колесо удачи Gen 17." [ref=e793]'
+        - row [ref=e794]:
+          - cell "Берта Берта (Bertha)" [ref=e795]:
+            - img "Берта" [ref=e797]
+            - generic [ref=e798]:
+              - text: Берта
+              - generic [ref=e799]: (Bertha)
+          - cell "Копейщик" [ref=e800]
+          - cell "17" [ref=e801]
+          - cell "Король Ледяного поля, Битва за мощь (SVS), Ежедневные предложения, Ралли героев, Осколки мифического генерала, Литейный магазин" [ref=e803]
+          - 'cell "Хирург-целитель: лечение и адреналиновый бафф, обездвиживание, повышение летальности отряда и защиты города." [ref=e804]'
+        - row [ref=e805]:
+          - cell "Элеонора Элеонора (Eleanor)" [ref=e806]:
+            - img "Элеонора" [ref=e808]
+            - generic [ref=e809]:
+              - text: Элеонора
+              - generic [ref=e810]: (Eleanor)
+          - cell "Стрелок" [ref=e811]
+          - cell "17" [ref=e812]
+          - cell "Зал героев, Осколки мифического генерала, Литейный магазин" [ref=e814]
+          - 'cell "Стрелок-призыватель: робо-пёс «Вождь» с AoE-звуковыми атаками, снижение защиты врага, рост атаки за павших." [ref=e815]'
+    - navigation "Навигация по разделам" [ref=e816]:
+      - link "← Ловушка на Медведя" [ref=e817] [cursor=pointer]:
+        - /url: /s/lovushka-na-medvedya/
+      - link "Научный центр →" [ref=e818] [cursor=pointer]:
+        - /url: /s/nauchnyj-tsentr/
+  - contentinfo [ref=e819]:
+    - paragraph [ref=e820]:
+      - text: © Whiteout Survival Helper - Информация взята с
+      - link "сервера Lolka" [ref=e821] [cursor=pointer]:
+        - /url: https://lolka.gg/410t1Hn4L
+      - text: ", автор rip_Ghoul"

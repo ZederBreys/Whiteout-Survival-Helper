@@ -1,0 +1,19 @@
+{% set isSection = section is defined and section %}
+{% set isEvent = event is defined and event %}
+{% set isIndexPage = page.url == '/' or page.url == '/s/' or page.url == '/e/' %}
+
+{% if isSection or isEvent %}
+<nav class="breadcrumbs" aria-label="Хлебные крошки" data-pagefind-ignore>
+  <a href="/">Главная</a>
+  {% if isSection %}
+    <span aria-hidden="true">/</span>
+    <a href="/s/">Разделы</a>
+  {% endif %}
+  {% if isEvent %}
+    <span aria-hidden="true">/</span>
+    <a href="/e/">События</a>
+  {% endif %}
+  <span aria-hidden="true">/</span>
+  <span aria-current="page">{{ section.title if isSection else event.title }}</span>
+</nav>
+{% endif %}

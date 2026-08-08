@@ -1,0 +1,43 @@
+{% macro renderBlocks(item) %}
+  {% for block in item.body.blocks %}
+    {% if block.type == "intro" %}
+      <div class="intro-block">
+        <p>{{ block.text | formatText | safe }}</p>
+      </div>
+    {% elif block.type == "info" %}
+      <div class="image-card">
+        {{ block.text | formatText | safe }}
+      </div>
+    {% elif block.type == "extra" %}
+      <div class="extra-block">
+        {{ block.text | formatText | safe }}
+      </div>
+    {% elif block.type == "tip" %}
+      <div class="tip-block">
+        {{ block.text | formatText | safe }}
+      </div>
+    {% elif block.type == "all" %}
+      <div class="all-description">
+        <p>{{ block.text | formatText | safe }}</p>
+      </div>
+      <div class="gallery">
+        {% for img in block.images %}
+          {% image img.sourcePath, img.fileName, "lazy" %}
+        {% endfor %}
+      </div>
+    {% elif block.type == "single" or block.type == "range" %}
+      <div class="image-card">
+        {% if block.image %}
+          {% image block.image.sourcePath, block.image.fileName, "lazy" %}
+        {% elif block.images | length > 0 %}
+          {% for img in block.images %}
+            {% image img.sourcePath, img.fileName, "lazy" %}
+          {% endfor %}
+        {% endif %}
+        {% if block.text %}
+          <div class="image-description">{{ block.text | formatText | safe }}</div>
+        {% endif %}
+      </div>
+    {% endif %}
+  {% endfor %}
+{% endmacro %}

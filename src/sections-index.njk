@@ -1,0 +1,15 @@
+---
+layout: base.njk
+permalink: /s/
+title: "Разделы"
+---
+
+<h1>Разделы</h1>
+
+<div class="cards-grid">
+  {% for s in site.sections %}
+    <a href="{{ s.url }}" class="card">
+      <span class="card-title">{{ s.title }}</span>
+    </a>
+  {% endfor %}
+</div>

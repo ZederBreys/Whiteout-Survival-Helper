@@ -1,0 +1,25 @@
+---
+layout: base.njk
+permalink: /
+---
+
+<h1>Whiteout Survival Помощник</h1>
+<p>Быстрые советы и гайды по игре.</p>
+
+<h2>Разделы</h2>
+<div class="cards-grid">
+  {% for s in site.sections %}
+    <a href="{{ s.url }}" class="card">
+      <span class="card-title">{{ s.title }}</span>
+    </a>
+  {% endfor %}
+</div>
+
+<h2>События</h2>
+<div class="cards-grid">
+  {% for evt in site.eventsCategory.children %}
+    <a href="{{ evt.url }}" class="card">
+      <span class="card-title">{{ evt.title }}</span>
+    </a>
+  {% endfor %}
+</div>

@@ -1,0 +1,101 @@
+.search-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  height: 36px;
+  min-width: 260px;
+  padding: 0 var(--space-md);
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.search-btn:hover,
+.search-btn:focus-visible {
+  border-color: var(--color-accent);
+  color: var(--color-text-primary);
+  outline: none;
+}
+
+.search-icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.search-icon .icon {
+  width: 18px;
+  height: 18px;
+}
+
+.search-placeholder {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.search-shortcut {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  padding: 2px 6px;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-sm);
+  line-height: 1.4;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .search-btn {
+    min-width: unset;
+    width: 44px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .search-placeholder,
+  .search-shortcut {
+    display: none;
+  }
+}
+
+#search {
+  margin-top: var(--space-md);
+}
+
+:root {
+  --pagefind-ui-scale: 1 !important;
+  --pagefind-ui-primary: var(--color-accent) !important;
+  --pagefind-ui-text: var(--color-text-primary) !important;
+  --pagefind-ui-background: var(--color-bg-secondary) !important;
+  --pagefind-ui-border: var(--color-border) !important;
+  --pagefind-ui-tag: var(--color-bg-tertiary) !important;
+  --pagefind-ui-border-width: 1px !important;
+  --pagefind-ui-border-radius: var(--radius-md) !important;
+  --pagefind-ui-image-border-radius: var(--radius-sm) !important;
+  --pagefind-ui-image-box-ratio: 0 !important;
+  --pagefind-ui-font: var(--font-system) !important;
+}
+
+.pagefind-ui--reset .pagefind-ui__result-excerpt {
+  color: var(--color-text-secondary);
+}
+
+.pagefind-ui--reset .pagefind-ui__button {
+  border: var(--pagefind-ui-border-width) solid var(--pagefind-ui-border);
+  border-radius: var(--pagefind-ui-border-radius);
+  background: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.pagefind-ui--reset .pagefind-ui__button:hover {
+  border-color: var(--color-accent);
+  background-color: var(--color-bg-tertiary);
+}

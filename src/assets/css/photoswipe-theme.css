@@ -1,0 +1,28 @@
+.pswp {
+  --pswp-bg: #0f172a;
+  --pswp-placeholder-bg: #1e293b;
+  --pswp-icon-color: #f1f5f9;
+  --pswp-icon-color-secondary: #64748b;
+  --pswp-icon-stroke-color: #64748b;
+  --pswp-preloader-color: rgba(100, 116, 139, 0.3);
+  --pswp-preloader-color-secondary: rgba(241, 245, 249, 0.9);
+  --pswp-error-text-color: #f85149;
+}
+
+.pswp__top-bar {
+  background: transparent;
+}
+
+.pswp__button {
+  transition: opacity 0.15s ease;
+}
+
+.pswp__button:hover {
+  opacity: 0.8;
+}
+
+.pswp__counter {
+  color: var(--pswp-icon-color);
+  font-family: var(--font-system);
+  font-size: 0.8125rem;
+}

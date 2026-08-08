@@ -1,0 +1,117 @@
+---
+pagination:
+  data: site.sections
+  size: 1
+  alias: section
+permalink: "/s/{{ section.id }}/"
+layout: base.njk
+---
+
+<h1>{{ section.title }}</h1>
+
+{% if section.heroData and section.heroData.length > 0 %}
+  <div class="heroes-table-wrap">
+    <table class="heroes-table">
+      <colgroup>
+        <col class="hero-col-name">
+        <col class="hero-col-troops">
+        <col class="hero-col-gen">
+        <col class="hero-col-source">
+        <col class="hero-col-role">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Герой</th>
+          <th>Войска</th>
+          <th>Поколение</th>
+          <th>Способ получения</th>
+          <th>Ключевая мета-роль и Стратегическая ценность</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for hero in section.heroData %}
+        <tr data-gen="{{ hero.generation }}"{% if loop.first or hero.generation != section.heroData[loop.index0 - 1].generation %} class="gen-start"{% endif %}>
+          <td class="hero-table-cell" data-label="Герой">
+            {% set heroPath = "DataSetW/Все герои/" + hero.image %}
+            {% image heroPath, hero.name, "lazy" %}
+            <span class="hero-table-name">{{ hero.name }} <span class="hero-table-name-en">({{ hero.nameEn }})</span></span>
+          </td>
+          <td data-label="Войска">{{ hero.troops }}</td>
+          <td data-label="Поколение"><span class="gen-badge">{{ hero.generation }}</span></td>
+          <td data-label="Способ получения">{{ hero.source }}</td>
+          <td data-label="Ключевая мета-роль">{{ hero.role }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% else %}
+  {% set hasImageBlocks = false %}
+  {% for block in section.body.blocks %}
+    {% if block.type == "single" or block.type == "range" or block.type == "all" %}
+      {% set hasImageBlocks = true %}
+    {% endif %}
+  {% endfor %}
+
+  {% if not hasImageBlocks and section.numberedImages.length > 0 %}
+    {% set cover = section.numberedImages[0] %}
+    <div class="cover-image">
+      {% image cover.sourcePath, section.title, "eager" %}
+    </div>
+  {% endif %}
+
+  {% if section.hasText %}
+    {% for block in section.body.blocks %}
+      {% if block.type == "intro" %}
+        <div class="intro-block">
+          <p>{{ block.text | formatText | safe }}</p>
+        </div>
+      {% elif block.type == "info" %}
+        <div class="image-card">
+          {{ block.text | formatText | safe }}
+        </div>
+      {% elif block.type == "extra" %}
+        <div class="extra-block">
+          {{ block.text | formatText | safe }}
+        </div>
+      {% elif block.type == "tip" %}
+        <div class="tip-block">
+          {{ block.text | formatText | safe }}
+        </div>
+      {% elif block.type == "all" %}
+        <div class="all-description">
+          <p>{{ block.text | formatText | safe }}</p>
+        </div>
+        <div class="gallery">
+          {% for img in block.images %}
+            {% image img.sourcePath, img.fileName, "lazy" %}
+          {% endfor %}
+        </div>
+      {% elif block.type == "single" or block.type == "range" %}
+        <div class="image-card">
+          {% if block.image %}
+            {% image block.image.sourcePath, block.image.fileName, "lazy" %}
+          {% elif block.images.length > 0 %}
+            {% for img in block.images %}
+              {% image img.sourcePath, img.fileName, "lazy" %}
+            {% endfor %}
+          {% endif %}
+          {% if block.text %}
+            <div class="image-description">{{ block.text | formatText | safe }}</div>
+          {% endif %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
+  {% if section.namedImages.length > 0 %}
+    <div class="named-images">
+      {% for img in section.namedImages %}
+        <div class="image-card">
+          {% image img.sourcePath, img.baseName, "lazy" %}
+          <div class="image-description">{{ img.baseName }}</div>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endif %}

@@ -1,0 +1,36 @@
+{% set pageTitle = "" %}
+{% set pageDescription = "Whiteout Survival Helper — быстрые советы и гайды по игре" %}
+{% set pageUrl = "" %}
+{% set pageImage = "" %}
+
+{% if section %}
+  {% set pageTitle = section.title %}
+  {% set pageDescription = section.title + " — Whiteout Survival Helper" %}
+  {% set pageUrl = section.url %}
+  {% if section.numberedImages.length > 0 %}
+    {% set firstImg = section.numberedImages[0] %}
+  {% endif %}
+{% elif event %}
+  {% set pageTitle = event.title %}
+  {% set pageDescription = event.title + " — Whiteout Survival Helper" %}
+  {% set pageUrl = event.url %}
+  {% if event.numberedImages.length > 0 %}
+    {% set firstImg = event.numberedImages[0] %}
+  {% endif %}
+{% elif title %}
+  {% set pageTitle = title %}
+  {% set pageDescription = title + " — Whiteout Survival Helper" %}
+  {% if page.url %}{% set pageUrl = page.url %}{% endif %}
+{% else %}
+  {% set pageTitle = "Whiteout Survival Helper" %}
+  {% set pageUrl = "/" %}
+{% endif %}
+
+{% if not pagefindIgnore %}
+<link rel="canonical" href="{{ pageUrl }}">
+{% endif %}
+<meta property="og:title" content="{{ pageTitle }}">
+<meta property="og:description" content="{{ pageDescription }}">
+<meta property="og:type" content="{% if section or event %}article{% else %}website{% endif %}">
+<meta property="og:url" content="{{ pageUrl }}">
+<meta property="og:site_name" content="WOS Helper">

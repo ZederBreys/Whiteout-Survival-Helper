@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="view-transition" content="same-origin">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/assets/icons/favicon-64x64.png">
+  <link rel="icon" type="image/png" sizes="128x128" href="/assets/icons/favicon-128x128.png">
+  <link rel="icon" type="image/png" sizes="256x256" href="/assets/icons/favicon-256x256.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0f172a">
+  <title>{% if section %}{{ section.title }} — WOS Helper{% elif event %}{{ event.title }} — WOS Helper{% elif title %}{{ title }} — WOS Helper{% else %}WOS Helper{% endif %}</title>
+  <meta name="description" content="{% if section %}{{ section.title }}{% elif event %}{{ event.title }}{% elif title %}{{ title }}{% else %}Whiteout Survival Helper{% endif %}">
+  {% include "head-seo.njk" %}
+</head>
+<body>
+  {% include "header.njk" %}
+  {% include "navigation/sidebar.njk" %}
+
+  <main data-pagefind-body{% if pagefindIgnore %} data-pagefind-ignore{% endif %}>
+    {% include "breadcrumbs.njk" %}
+    {{ content | safe }}
+
+    {% if section %}
+      {% if section.prevUrl or section.nextUrl %}
+      <nav class="prev-next" aria-label="Навигация по разделам" data-pagefind-ignore>
+        {% if section.prevUrl %}<a href="{{ section.prevUrl }}">← {{ section.prevLabel }}</a>{% else %}<span></span>{% endif %}
+        {% if section.nextUrl %}<a href="{{ section.nextUrl }}">{{ section.nextLabel }} →</a>{% else %}<span></span>{% endif %}
+      </nav>
+      {% endif %}
+    {% elif event %}
+      {% if event.prevUrl or event.nextUrl %}
+      <nav class="prev-next" aria-label="Навигация по событиям" data-pagefind-ignore>
+        {% if event.prevUrl %}<a href="{{ event.prevUrl }}">← {{ event.prevLabel }}</a>{% else %}<span></span>{% endif %}
+        {% if event.nextUrl %}<a href="{{ event.nextUrl }}">{{ event.nextLabel }} →</a>{% else %}<span></span>{% endif %}
+      </nav>
+      {% endif %}
+    {% endif %}
+  </main>
+
+  <footer data-pagefind-ignore>
+    <p>&copy; Whiteout Survival Helper - Информация взята с <a href="https://lolka.gg/410t1Hn4L" target="_blank" rel="noopener noreferrer">сервера Lolka</a>, автор rip_Ghoul</p>
+  </footer>
+
+  {% include "navigation/mobile-nav.njk" %}
+  {% include "schema.njk" %}
+  <script type="module" src="/assets/js/image-viewer.js"></script>
+  <script src="/assets/js/search-shortcut.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+body {
+  font-family: var(--font-system);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+}
+
+h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: var(--space-sm);
+  margin-top: var(--space-lg);
+  color: var(--color-text-secondary);
+}
+
+h2:first-of-type {
+  margin-top: 0;
+}
+
+p {
+  margin-bottom: var(--space-sm);
+}
+
+a {
+  color: var(--color-accent);
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: var(--space-sm);
+  margin-top: var(--space-md);
+  color: var(--color-text-secondary);
+}
+
+h4 {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: var(--space-sm);
+  margin-top: var(--space-md);
+  color: var(--color-text-secondary);
+}
+
+/* Lists inside content containers */
+.image-card ul,
+.image-card ol,
+.info-block ul,
+.info-block ol,
+.intro-block ul,
+.intro-block ol,
+.extra-block ul,
+.extra-block ol,
+.tip-block ul,
+.tip-block ol,
+.all-description ul,
+.all-description ol,
+.image-description ul,
+.image-description ol {
+  padding-left: 1.5em;
+  margin-bottom: var(--space-sm);
+}
+
+.image-card ul,
+.info-block ul,
+.intro-block ul,
+.extra-block ul,
+.tip-block ul,
+.all-description ul,
+.image-description ul {
+  list-style-type: disc;
+}
+
+.image-card ol,
+.info-block ol,
+.intro-block ol,
+.extra-block ol,
+.tip-block ol,
+.all-description ol,
+.image-description ol {
+  list-style-type: decimal;
+}
+
+.image-card li,
+.info-block li,
+.intro-block li,
+.extra-block li,
+.tip-block li,
+.all-description li,
+.image-description li {
+  margin-bottom: 2px;
+}
+
+/* Blockquote inside content containers */
+.image-card blockquote,
+.info-block blockquote,
+.intro-block blockquote,
+.extra-block blockquote,
+.tip-block blockquote,
+.all-description blockquote,
+.image-description blockquote {
+  border-left: 3px solid var(--color-border);
+  padding-left: var(--space-md);
+  margin: var(--space-sm) 0 var(--space-md);
+  color: var(--color-text-secondary);
+}
+
+/* Code inside content containers */
+.image-card code,
+.info-block code,
+.intro-block code,
+.extra-block code,
+.tip-block code,
+.all-description code,
+.image-description code {
+  font-family: Consolas, "Courier New", monospace;
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}

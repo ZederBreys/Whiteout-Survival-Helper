@@ -1,0 +1,12 @@
+{% from "icons.njk" import icon %}
+<nav class="mobile-nav" aria-label="Мобильная навигация" data-pagefind-ignore>
+  <a href="/" class="mobile-nav-item {% if page.url == '/' %}active{% endif %}" {% if page.url == '/' %}aria-current="page"{% endif %}>
+    {{ icon('home') }} <span>Главная</span>
+  </a>
+  <a href="/s/" class="mobile-nav-item {% if page.url.startsWith('/s/') %}active{% endif %}" {% if page.url.startsWith('/s/') %}aria-current="page"{% endif %}>
+    {{ icon('folder') }} <span>Разделы</span>
+  </a>
+  <a href="/e/" class="mobile-nav-item {% if page.url.startsWith('/e/') %}active{% endif %}" {% if page.url.startsWith('/e/') %}aria-current="page"{% endif %}>
+    {{ icon('calendar') }} <span>События</span>
+  </a>
+</nav>

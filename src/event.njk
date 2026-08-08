@@ -1,0 +1,79 @@
+---
+pagination:
+  data: site.eventsCategory.children
+  size: 1
+  alias: event
+permalink: "/e/{{ event.id }}/"
+layout: base.njk
+---
+
+<h1>{{ event.title }}</h1>
+
+{% set hasImageBlocks = false %}
+{% for block in event.body.blocks %}
+  {% if block.type == "single" or block.type == "range" or block.type == "all" %}
+    {% set hasImageBlocks = true %}
+  {% endif %}
+{% endfor %}
+
+{% if not hasImageBlocks and event.numberedImages.length > 0 %}
+  {% set cover = event.numberedImages[0] %}
+  <div class="cover-image">
+    {% image cover.sourcePath, event.title, "eager" %}
+  </div>
+{% endif %}
+
+{% if event.hasText %}
+  {% for block in event.body.blocks %}
+    {% if block.type == "intro" %}
+      <div class="intro-block">
+        <p>{{ block.text | formatText | safe }}</p>
+      </div>
+    {% elif block.type == "info" %}
+      <div class="image-card">
+        {{ block.text | formatText | safe }}
+      </div>
+    {% elif block.type == "extra" %}
+      <div class="extra-block">
+        {{ block.text | formatText | safe }}
+      </div>
+    {% elif block.type == "tip" %}
+      <div class="tip-block">
+        {{ block.text | formatText | safe }}
+      </div>
+    {% elif block.type == "all" %}
+      <div class="all-description">
+        <p>{{ block.text | formatText | safe }}</p>
+      </div>
+      <div class="gallery">
+        {% for img in block.images %}
+          {% image img.sourcePath, img.fileName, "lazy" %}
+        {% endfor %}
+      </div>
+    {% elif block.type == "single" or block.type == "range" %}
+      <div class="image-card">
+        {% if block.image %}
+          {% image block.image.sourcePath, block.image.fileName, "lazy" %}
+        {% elif block.images.length > 0 %}
+          {% for img in block.images %}
+            {% image img.sourcePath, img.fileName, "lazy" %}
+          {% endfor %}
+        {% endif %}
+        {% if block.text %}
+          <div class="image-description">{{ block.text | formatText | safe }}</div>
+        {% endif %}
+      </div>
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% if event.namedImages.length > 0 %}
+  <div class="named-images">
+    {% for img in event.namedImages %}
+      <div class="image-card">
+        {% image img.sourcePath, img.baseName, "lazy" %}
+        <div class="image-description">{{ img.baseName }}</div>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}

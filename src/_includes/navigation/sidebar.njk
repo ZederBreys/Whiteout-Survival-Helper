@@ -1,0 +1,28 @@
+{% from "icons.njk" import sectionIcon, eventIcon %}
+<aside class="sidebar" aria-label="Боковая навигация" data-pagefind-ignore>
+  <div class="sidebar-group">
+    <a href="/s/" class="sidebar-group-title">Разделы</a>
+    <ul>
+      {% for s in site.sections %}
+        <li>
+          <a href="{{ s.url }}" {% if section and section.id == s.id %}class="active" aria-current="page"{% endif %}>
+            {{ sectionIcon(s.id) }} <span>{{ s.title }}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="sidebar-group">
+    <a href="/e/" class="sidebar-group-title">События</a>
+    <ul>
+      {% for evt in site.eventsCategory.children %}
+        <li>
+          <a href="{{ evt.url }}" {% if event and event.id == evt.id %}class="active" aria-current="page"{% endif %}>
+            {{ eventIcon(evt.id) }} <span>{{ evt.title }}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</aside>
