@@ -7,16 +7,13 @@
   {% set pageTitle = section.title %}
   {% set pageDescription = section.title + " — Whiteout Survival Helper" %}
   {% set pageUrl = section.url %}
-  {% if section.numberedImages.length > 0 %}
-    {% set firstImg = section.numberedImages[0] %}
+  {% if section.heroData %}
+    {% set pageType = "article" %}
   {% endif %}
 {% elif event %}
   {% set pageTitle = event.title %}
   {% set pageDescription = event.title + " — Whiteout Survival Helper" %}
   {% set pageUrl = event.url %}
-  {% if event.numberedImages.length > 0 %}
-    {% set firstImg = event.numberedImages[0] %}
-  {% endif %}
 {% elif title %}
   {% set pageTitle = title %}
   {% set pageDescription = title + " — Whiteout Survival Helper" %}
@@ -26,11 +23,34 @@
   {% set pageUrl = "/" %}
 {% endif %}
 
+{# OG Image — priority: manual ogImage → ogOverrides → first numberedImages → global fallback #}
+{% if ogImage %}
+  {% set pageImage = ogImage %}
+{% elif section and siteConfig.ogOverrides[section.id] %}
+  {% set pageImage = siteConfig.ogOverrides[section.id] %}
+{% elif event and siteConfig.ogOverrides[event.id] %}
+  {% set pageImage = siteConfig.ogOverrides[event.id] %}
+{% elif section and section.numberedImages.length > 0 %}
+  {% set firstImg = section.numberedImages[0] %}
+  {% set pageImage = "/assets/images/" + section.sourceFolderName + "/" + firstImg.baseName + "-574w.webp" %}
+{% elif event and event.numberedImages.length > 0 %}
+  {% set firstImg = event.numberedImages[0] %}
+  {% set pageImage = "/assets/images/" + event.sourceFolderName + "/" + firstImg.baseName + "-574w.webp" %}
+{% endif %}
+
+{% if not pageImage %}
+  {% set pageImage = "/assets/icons/favicon-256x256.png" %}
+{% endif %}
+
+{% set absoluteUrl = siteConfig.siteUrl | absUrl(pageUrl) %}
+{% set absoluteImage = siteConfig.siteUrl | absUrl(pageImage) %}
+
 {% if not pagefindIgnore %}
-<link rel="canonical" href="{{ pageUrl }}">
+<link rel="canonical" href="{{ absoluteUrl }}">
 {% endif %}
 <meta property="og:title" content="{{ pageTitle }}">
 <meta property="og:description" content="{{ pageDescription }}">
 <meta property="og:type" content="{% if section or event %}article{% else %}website{% endif %}">
-<meta property="og:url" content="{{ pageUrl }}">
+<meta property="og:url" content="{{ absoluteUrl }}">
+<meta property="og:image" content="{{ absoluteImage }}">
 <meta property="og:site_name" content="WOS Helper">

@@ -3,12 +3,14 @@ layout: base.njk
 permalink: /s/
 title: "Разделы"
 ---
+{% from "icons.njk" import sectionIcon %}
 
 <h1>Разделы</h1>
 
 <div class="cards-grid">
   {% for s in site.sections %}
     <a href="{{ s.url }}" class="card">
+      {{ sectionIcon(s.id) }}
       <span class="card-title">{{ s.title }}</span>
     </a>
   {% endfor %}

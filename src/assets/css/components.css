@@ -59,6 +59,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: var(--space-sm);
   min-height: 72px;
   padding: var(--space-md);
   background: var(--gradient-card);
@@ -82,6 +83,13 @@
 .card:active {
   background: var(--gradient-card);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+}
+
+.card .icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  opacity: 0.7;
 }
 
 .card-title {
@@ -116,6 +124,32 @@ main {
   height: auto;
   display: block;
 }
+
+@media (min-width: 1024px) {
+  /* Ваш существующий код */
+  main {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .image-card {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .image-card picture + picture {
+    margin-top: var(--space-md);
+  }
+
+  /* ДОБАВИТЬ ЭТО: Центрирует саму картинку внутри широкой карточки */
+  .image-card img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 
 
 /* ===================================================
@@ -238,13 +272,37 @@ main {
   transform: scale(1.02);
 }
 
+/* Делаем .cover-image полноценной карточкой, как .image-card */
 .cover-image {
+  width: 100%;
+  max-width: 500px;
   margin-bottom: var(--space-lg);
+  background: var(--gradient-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  box-shadow: var(--shadow-card);
+}
+
+.cover-image picture {
+  display: block;
 }
 
 .cover-image img {
-  border-radius: var(--radius-md);
-  width: 100%;
+  border-radius: var(--radius-sm);
+  width: 100%;       /* Занимает всю доступную ширину внутри паддингов карточки */
+  max-width: 100%;
+  height: auto;      /* Пропорционально сжимает высоту */
+  display: block;
+}
+
+/* Стили для ПК (от 1024px) */
+@media (min-width: 1024px) {
+  .cover-image {
+    max-width: 600px;  /* Ширина совпадает с .image-card и .info-block */
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .all-description {

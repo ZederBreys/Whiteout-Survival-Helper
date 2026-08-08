@@ -3,12 +3,14 @@ layout: base.njk
 permalink: /e/
 title: "События"
 ---
+{% from "icons.njk" import eventIcon %}
 
 <h1>События</h1>
 
 <div class="cards-grid">
   {% for evt in site.eventsCategory.children %}
     <a href="{{ evt.url }}" class="card">
+      {{ eventIcon(evt.id) }}
       <span class="card-title">{{ evt.title }}</span>
     </a>
   {% endfor %}

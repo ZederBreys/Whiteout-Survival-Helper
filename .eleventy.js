@@ -96,6 +96,10 @@ module.exports = function (eleventyConfig) {
     return "";
   });
 
+  eleventyConfig.addFilter("absUrl", function (base, path) {
+    return String(base).replace(/\/+$/, "") + path;
+  });
+
   eleventyConfig.addFilter("formatText", function (text) {
     if (!text) return "";
     if (/<\/?(p|ul|ol|li|blockquote|h[2-4]|div|table)\b/i.test(text)) {
