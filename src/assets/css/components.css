@@ -61,26 +61,27 @@
   justify-content: center;
   min-height: 72px;
   padding: var(--space-md);
-  background-color: var(--color-bg-secondary);
+  background: var(--gradient-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   text-align: center;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-  transition: background-color 0.15s ease,
-              border-color 0.15s ease,
-              box-shadow 0.15s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+  transition: background 0.2s ease,
+              border-color 0.2s ease,
+              box-shadow 0.2s ease;
 }
 
 .card:hover {
-  background-color: var(--color-bg-tertiary);
-  border-color: var(--color-accent);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  background: var(--gradient-card-hover);
+  border-color: var(--color-border-hover);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28),
+              0 0 10px rgba(56, 189, 248, 0.06);
   color: var(--color-text-primary);
 }
 
 .card:active {
-  background-color: var(--color-bg-secondary);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  background: var(--gradient-card);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
 }
 
 .card-title {
@@ -101,11 +102,12 @@ main {
 .image-card {
   width: 100%;
   margin-bottom: var(--space-lg);
-  background-color: var(--color-bg-secondary);
+  background: var(--gradient-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   padding: var(--space-md);
   max-width: 500px;
+  box-shadow: var(--shadow-card);
 }
 
 .image-card img {
@@ -150,8 +152,7 @@ main {
   margin-bottom: var(--space-lg);
   padding: var(--space-md);
   
-  /* Делаем визуал плашки с плавной подсветкой/акцентом */
-  background-color: var(--color-bg-secondary);
+  background: var(--gradient-card);
   border: 1px solid var(--color-border);
   border-left: 4px solid var(--color-accent);
   border-radius: var(--radius-md);
@@ -160,6 +161,7 @@ main {
   line-height: 1.6;
   color: var(--color-text-secondary);
   max-width: 500px;
+  box-shadow: var(--shadow-card);
 }
 
 /* ===================================================
@@ -262,7 +264,7 @@ main {
 
 .extra-block {
   padding: var(--space-md);
-  background-color: var(--color-bg-secondary);
+  background: var(--gradient-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   color: var(--color-text-secondary);
@@ -271,10 +273,11 @@ main {
 .info-block {
   width: 100%;
   padding: var(--space-md);
-  background-color: var(--color-bg-secondary);
+  background: var(--gradient-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   max-width: 500px;
+  box-shadow: var(--shadow-card);
 }
 
 .intro-block {
@@ -282,7 +285,7 @@ main {
   color: var(--color-text-secondary);
   margin-bottom: var(--space-md);
   padding: var(--space-sm) var(--space-md);
-  background-color: var(--color-bg-secondary);
+  background: var(--gradient-card);
   border-left: 3px solid var(--color-accent);
   border-radius: var(--radius-sm);
   overflow-wrap: break-word;
@@ -293,8 +296,8 @@ main {
   line-height: 1.7;
   margin-bottom: var(--space-lg);
   padding: var(--space-md);
-  background-color: rgba(249, 115, 22, 0.06);
-  border: 1px solid rgba(249, 115, 22, 0.15);
+  background-color: rgba(251, 191, 36, 0.06);
+  border: 1px solid rgba(251, 191, 36, 0.15);
   border-radius: var(--radius-md);
   color: var(--color-text-primary);
   overflow-wrap: break-word;
@@ -413,7 +416,7 @@ main {
 
 .btn-primary:hover {
   background-color: var(--color-accent-hover);
-  box-shadow: 0 0 16px rgba(249, 115, 22, 0.3);
+  box-shadow: var(--glow-accent);
   color: var(--color-bg-primary);
 }
 
@@ -583,7 +586,7 @@ main {
   }
 
   .heroes-table tr:hover {
-    background: rgba(249, 115, 22, 0.04);
+    background: rgba(56, 189, 248, 0.04);
   }
 
   .heroes-table td {

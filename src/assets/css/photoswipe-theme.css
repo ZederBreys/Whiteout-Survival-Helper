@@ -1,12 +1,12 @@
 .pswp {
-  --pswp-bg: #0f172a;
-  --pswp-placeholder-bg: #1e293b;
-  --pswp-icon-color: #f1f5f9;
-  --pswp-icon-color-secondary: #64748b;
-  --pswp-icon-stroke-color: #64748b;
-  --pswp-preloader-color: rgba(100, 116, 139, 0.3);
-  --pswp-preloader-color-secondary: rgba(241, 245, 249, 0.9);
-  --pswp-error-text-color: #f85149;
+  --pswp-bg: #080f1d;
+  --pswp-placeholder-bg: #0d1728;
+  --pswp-icon-color: #edf7ff;
+  --pswp-icon-color-secondary: #62768c;
+  --pswp-icon-stroke-color: #62768c;
+  --pswp-preloader-color: rgba(98, 118, 140, 0.3);
+  --pswp-preloader-color-secondary: rgba(237, 247, 255, 0.9);
+  --pswp-error-text-color: #fb7185;
 }
 
 .pswp__top-bar {
