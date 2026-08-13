@@ -32,7 +32,7 @@ async function imageShortcode(src, alt, loading = "lazy") {
     const urlPath = `/assets/images/${sectionName}/`;
 
     const metadata = await Image(src, {
-      widths: [320, 574],
+      widths: [320, 574, 800, 1200],
       formats: ["webp"],
       outputDir: `./public/assets/images/${sectionName}/`,
       urlPath: urlPath,

@@ -22,6 +22,16 @@ header .logo:hover {
   color: var(--color-accent);
 }
 
+@media (max-width: 1023px) {
+  .intro-block,
+  .extra-block,
+  .tip-block,
+  .all-description,
+  .image-card {
+    scroll-margin-top: calc(var(--header-height) + var(--space-sm));
+  }
+}
+
 main {
   padding: var(--space-md);
 }

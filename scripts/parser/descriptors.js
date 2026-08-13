@@ -1,4 +1,5 @@
 const path = require("path");
+const { textSlug } = require("./slug");
 
 const PATTERNS = [
   {
@@ -73,8 +74,8 @@ const PATTERNS = [
   },
   {
     name: "tip",
-    regex: /^Совет\s+\d+\.txt$/i,
-    parse: () => ({ type: "tip", numbers: [], extension: null }),
+    regex: /^Совет\s+(\d+)\.txt$/i,
+    parse: (match) => ({ type: "tip", numbers: [], extension: null, number: parseInt(match[1], 10) }),
   },
 ];
 
@@ -101,8 +102,20 @@ function parseDescriptionFile(fileName) {
 function buildContentBlocks(descriptors, images) {
   const blocks = [];
   const assignedImages = new Set();
+  const usedIds = new Set();
   let order = 0;
   let hasSectionInfo = false;
+
+  function uniqueId(base) {
+    let id = base;
+    let suffix = 2;
+    while (usedIds.has(id)) {
+      id = `${base}-${suffix}`;
+      suffix++;
+    }
+    usedIds.add(id);
+    return id;
+  }
 
   for (const desc of descriptors) {
     if (desc.type === "intro") {
@@ -113,30 +126,39 @@ function buildContentBlocks(descriptors, images) {
         image: null,
         images: [],
         order: -1,
+        id: uniqueId(`intro-${textSlug(desc.text, "intro")}`),
       });
       continue;
     }
 
     if (desc.type === "info") {
       hasSectionInfo = true;
+      const blockId = desc.number
+        ? `info-${desc.number}`
+        : `info-${textSlug(desc.text, "info")}`;
       blocks.push({
         type: "info",
         text: desc.text,
         image: null,
         images: [],
         order: desc.number || 0,
+        id: uniqueId(blockId),
       });
       continue;
     }
 
     if (desc.type === "tip") {
       hasSectionInfo = true;
+      const blockId = desc.number
+        ? `tip-${desc.number}`
+        : `tip-${textSlug(desc.text, "tip")}`;
       blocks.push({
         type: "tip",
         text: desc.text,
         image: null,
         images: [],
         order: 0,
+        id: uniqueId(blockId),
       });
       continue;
     }
@@ -149,6 +171,7 @@ function buildContentBlocks(descriptors, images) {
         image: null,
         images: [],
         order: 999,
+        id: uniqueId(`extra-${textSlug(desc.text, "extra")}`),
       });
       continue;
     }
@@ -160,6 +183,7 @@ function buildContentBlocks(descriptors, images) {
         image: null,
         images: [...images],
         order: 0,
+        id: uniqueId(`all-${textSlug(desc.text, "all")}`),
       });
       images.forEach((img) => assignedImages.add(img.fileName));
       continue;
@@ -177,6 +201,12 @@ function buildContentBlocks(descriptors, images) {
     });
 
     if (matchedImages.length > 0) {
+      const firstNumber = desc.numbers[0];
+      const lastNumber = desc.numbers[desc.numbers.length - 1];
+      const blockId =
+        desc.type === "single"
+          ? `single-${firstNumber}`
+          : `range-${firstNumber}-${lastNumber}`;
       order++;
       blocks.push({
         type: desc.type,
@@ -184,6 +214,7 @@ function buildContentBlocks(descriptors, images) {
         image: matchedImages.length === 1 ? matchedImages[0] : null,
         images: matchedImages,
         order: order,
+        id: uniqueId(blockId),
       });
       matchedImages.forEach((img) => assignedImages.add(img.fileName));
     }
@@ -197,7 +228,9 @@ function buildContentBlocks(descriptors, images) {
       if (hasSectionInfo) {
         continue;
       }
-      console.warn(`  [parser] Изображение без описания: "${img.fileName}"`);
+      const relativePath = path.relative(process.cwd(), img.sourcePath).replace(/\\/g, "/");
+
+      console.warn(`  [parser] Изображение без описания: "${relativePath}"`);
     }
   }
 

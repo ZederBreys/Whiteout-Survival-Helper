@@ -32,10 +32,10 @@
   {% set pageImage = siteConfig.ogOverrides[event.id] %}
 {% elif section and section.numberedImages.length > 0 %}
   {% set firstImg = section.numberedImages[0] %}
-  {% set pageImage = "/assets/images/" + section.sourceFolderName + "/" + firstImg.baseName + "-574w.webp" %}
+  {% set pageImage = "/assets/images/" + section.sourceFolderName + "/" + firstImg.baseName + "-320w.webp" %}
 {% elif event and event.numberedImages.length > 0 %}
   {% set firstImg = event.numberedImages[0] %}
-  {% set pageImage = "/assets/images/" + event.sourceFolderName + "/" + firstImg.baseName + "-574w.webp" %}
+  {% set pageImage = "/assets/images/" + event.sourceFolderName + "/" + firstImg.baseName + "-320w.webp" %}
 {% endif %}
 
 {% if not pageImage %}

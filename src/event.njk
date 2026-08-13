@@ -7,6 +7,8 @@ permalink: "/e/{{ event.id }}/"
 layout: base.njk
 ---
 
+{% from "copy-link.njk" import copyLinkButton %}
+
 <h1>{{ event.title }}</h1>
 
 {% set hasImageBlocks = false %}
@@ -24,47 +26,53 @@ layout: base.njk
 {% endif %}
 
 {% if event.hasText %}
-  {% for block in event.body.blocks %}
-    {% if block.type == "intro" %}
-      <div class="intro-block">
-        <p>{{ block.text | formatText | safe }}</p>
-      </div>
-    {% elif block.type == "info" %}
-      <div class="image-card">
-        {{ block.text | formatText | safe }}
-      </div>
-    {% elif block.type == "extra" %}
-      <div class="extra-block">
-        {{ block.text | formatText | safe }}
-      </div>
-    {% elif block.type == "tip" %}
-      <div class="tip-block">
-        {{ block.text | formatText | safe }}
-      </div>
-    {% elif block.type == "all" %}
-      <div class="all-description">
-        <p>{{ block.text | formatText | safe }}</p>
-      </div>
-      <div class="gallery">
-        {% for img in block.images %}
-          {% image img.sourcePath, img.fileName, "lazy" %}
-        {% endfor %}
-      </div>
-    {% elif block.type == "single" or block.type == "range" %}
-      <div class="image-card">
-        {% if block.image %}
-          {% image block.image.sourcePath, block.image.fileName, "lazy" %}
-        {% elif block.images.length > 0 %}
+    {% for block in event.body.blocks %}
+      {% if block.type == "intro" %}
+        <div class="intro-block" id="{{ block.id }}">
+          <p>{{ block.text | formatText | safe }}</p>
+          {{ copyLinkButton() }}
+        </div>
+      {% elif block.type == "info" %}
+        <div class="image-card" id="{{ block.id }}">
+          {{ block.text | formatText | safe }}
+          {{ copyLinkButton() }}
+        </div>
+      {% elif block.type == "extra" %}
+        <div class="extra-block" id="{{ block.id }}">
+          {{ block.text | formatText | safe }}
+          {{ copyLinkButton() }}
+        </div>
+      {% elif block.type == "tip" %}
+        <div class="tip-block" id="{{ block.id }}">
+          {{ block.text | formatText | safe }}
+          {{ copyLinkButton() }}
+        </div>
+      {% elif block.type == "all" %}
+        <div class="all-description" id="{{ block.id }}">
+          <p>{{ block.text | formatText | safe }}</p>
+          {{ copyLinkButton() }}
+        </div>
+        <div class="gallery">
           {% for img in block.images %}
             {% image img.sourcePath, img.fileName, "lazy" %}
           {% endfor %}
-        {% endif %}
-        {% if block.text %}
-          <div class="image-description">{{ block.text | formatText | safe }}</div>
-        {% endif %}
-      </div>
-    {% endif %}
-  {% endfor %}
+        </div>
+      {% elif block.type == "single" or block.type == "range" %}
+        <div class="image-card" id="{{ block.id }}">
+          {% if block.image %}
+            {% image block.image.sourcePath, block.image.fileName, "lazy" %}
+          {% elif block.images.length > 0 %}
+            {% for img in block.images %}
+              {% image img.sourcePath, img.fileName, "lazy" %}
+            {% endfor %}
+          {% endif %}
+          {% if block.text %}
+            <div class="image-description">{{ block.text | formatText | safe }}</div>
+          {% endif %}
+          {{ copyLinkButton() }}
+        </div>
+      {% endif %}
+    {% endfor %}
 {% endif %}
 
 {% if event.namedImages.length > 0 %}

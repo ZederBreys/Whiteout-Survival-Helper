@@ -14,7 +14,7 @@ const SLUG_MAP = {
   "Облики": "obliki",
   "Переход в другое государство": "perekhod-v-drugoe-gosudarstvo",
   "Питомцы": "pitomtsy",
-  "Путь в ТУНДРУ": "put-v-tundru",
+  "Путь в тундру": "put-v-tundru",
   "Рейды": "rejdy",
   "Снаряжение героев и губернатора": "snaryazhenie-geroev-i-gubernatora",
   "Советы": "sovety",
@@ -39,6 +39,7 @@ const EVENT_SLUG_MAP = {
   "Король ледяного поля": "korol-ledyanogo-polya",
   "Битва в каньоне": "bitva-v-kanone",
   "Мощь Государства(СВС)": "moshch-gosudarstva-svs",
+  "Пламя и Клыки": "flame_and_fangs"
 };
 
 const TRANSLIT_MAP = {
@@ -71,6 +72,27 @@ function autoSlug(text) {
     .toLowerCase();
 
   return result || "unknown";
+}
+
+function textSlug(text, fallback) {
+  const plain = String(text || "")
+    .replace(/<[^>]*>/g, " ")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;|&apos;/g, "'")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  const slug = autoSlug(plain);
+
+  if (!slug || slug === "unknown") {
+    return String(fallback || "block");
+  }
+
+  return slug.length > 64 ? slug.slice(0, 64).replace(/-+$/g, "") : slug;
 }
 
 function getSectionSlug(folderName) {
@@ -107,4 +129,5 @@ module.exports = {
   getEventSlug,
   extractEventName,
   autoSlug,
+  textSlug,
 };
