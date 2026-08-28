@@ -12,3 +12,8 @@ public/
 Thumbs.db
 *.bat
 docs/
+hero-snapshot-desktop.txt
+hero-table-desktop-1440.png
+hero-table-mobile-375.png
+page-snapshot-desktop.txt
+Caddyfile
