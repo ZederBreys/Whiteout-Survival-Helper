@@ -39,7 +39,10 @@ const EVENT_SLUG_MAP = {
   "Король ледяного поля": "korol-ledyanogo-polya",
   "Битва в каньоне": "bitva-v-kanone",
   "Мощь Государства(СВС)": "moshch-gosudarstva-svs",
-  "Пламя и Клыки": "flame_and_fangs"
+  "Пламя и Клыки": "flame_and_fangs",
+  "Сражение альянсов": "srazhenie-alyansov",
+  "Гонка вооружения": "arms_race",
+  "Зимняя осада": "winter_siege"
 };
 
 const TRANSLIT_MAP = {
